@@ -1,0 +1,96 @@
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 114
+Aibr Preprocessing
+|F|:73
+|X|:5
+|A|:255
+|P|:0
+|E|:0
+H1 Setup Time (msec): 17
+Setting horizon to:NaN
+Running Greedy Best First Search
+h(n = s_0)=75.5
+ g(n)= 1.0 h(n)=64.2
+ g(n)= 1.4 h(n)=59.64
+ g(n)= 2.6 h(n)=56.280003
+ g(n)= 2.6999998 h(n)=55.239998
+ g(n)= 3.4999998 h(n)=53.0
+ g(n)= 3.5599997 h(n)=52.58
+ g(n)= 4.16 h(n)=50.86
+ g(n)= 4.25 h(n)=50.85
+-------------Time: 10s ; Expanded Nodes: 32035 (Avg-Speed 3203.0 n/s); Evaluated States: 70626
+-------------Time: 20s ; Expanded Nodes: 58741 (Avg-Speed 2937.0 n/s); Evaluated States: 126689
+-------------Time: 30s ; Expanded Nodes: 92298 (Avg-Speed 3076.0 n/s); Evaluated States: 198116
+-------------Time: 40s ; Expanded Nodes: 120303 (Avg-Speed 3007.0 n/s); Evaluated States: 259552
+-------------Time: 50s ; Expanded Nodes: 153344 (Avg-Speed 3066.0 n/s); Evaluated States: 327736
+-------------Time: 60s ; Expanded Nodes: 188809 (Avg-Speed 3146.0 n/s); Evaluated States: 405892
+-------------Time: 70s ; Expanded Nodes: 227468 (Avg-Speed 3249.0 n/s); Evaluated States: 487313
+-------------Time: 80s ; Expanded Nodes: 261670 (Avg-Speed 3270.0 n/s); Evaluated States: 561724
+-------------Time: 90s ; Expanded Nodes: 295434 (Avg-Speed 3282.0 n/s); Evaluated States: 632372
+-------------Time: 100s ; Expanded Nodes: 329470 (Avg-Speed 3294.0 n/s); Evaluated States: 701805
+-------------Time: 110s ; Expanded Nodes: 364418 (Avg-Speed 3312.0 n/s); Evaluated States: 777039
+-------------Time: 120s ; Expanded Nodes: 398454 (Avg-Speed 3320.0 n/s); Evaluated States: 847898
+-------------Time: 130s ; Expanded Nodes: 421987 (Avg-Speed 3246.0 n/s); Evaluated States: 895358
+-------------Time: 140s ; Expanded Nodes: 455448 (Avg-Speed 3253.0 n/s); Evaluated States: 961477
+-------------Time: 150s ; Expanded Nodes: 490306 (Avg-Speed 3268.0 n/s); Evaluated States: 1031452
+-------------Time: 160s ; Expanded Nodes: 520309 (Avg-Speed 3251.0 n/s); Evaluated States: 1092983
+-------------Time: 170s ; Expanded Nodes: 553615 (Avg-Speed 3256.0 n/s); Evaluated States: 1158593
+-------------Time: 180s ; Expanded Nodes: 586473 (Avg-Speed 3258.0 n/s); Evaluated States: 1223277
+-------------Time: 190s ; Expanded Nodes: 619811 (Avg-Speed 3262.0 n/s); Evaluated States: 1291488
+-------------Time: 200s ; Expanded Nodes: 650867 (Avg-Speed 3254.0 n/s); Evaluated States: 1351599
+-------------Time: 210s ; Expanded Nodes: 686821 (Avg-Speed 3270.0 n/s); Evaluated States: 1418951
+ g(n)= 14.709999 h(n)=40.589996
+ g(n)= 24.77 h(n)=30.35
+ g(n)= 24.95 h(n)=30.17
+ g(n)= 34.95 h(n)=20.17
+ g(n)= 35.04 h(n)=20.08
+ g(n)= 45.04 h(n)=10.08
+ g(n)= 45.120003 h(n)=10.0
+ g(n)= 55.120003 h(n)=0.0
+Problem Solved
+
+Found Plan:
+0.0: (land-plane P1 R3)
+1.0: (land-plane P2 R2)
+2.0: (land-plane P5 R1)
+3.0: (taxi-to-gate P1 R3 G3)
+4.0: (land-plane P3 R3)
+5.0: (taxi-to-gate P2 R2 G5)
+6.0: (taxi-to-gate P3 R3 G4)
+7.0: (land-plane P4 R3)
+8.0: (unload-passengers P3 G4)
+9.0: (load-passengers P3 G4)
+10.0: (unload-passengers P1 G3)
+11.0: (taxi-to-gate P5 R1 G1)
+12.0: (unload-passengers P5 G1)
+13.0: (load-passengers P1 G3)
+14.0: (load-passengers P5 G1)
+15.0: (refuel-plane P1 G3)
+16.0: (taxi-to-gate P4 R3 G2)
+17.0: (taxi-to-runway P1 G3 R2)
+18.0: (takeoff P1 R2)
+19.0: (unload-passengers P2 G5)
+20.0: (load-passengers P2 G5)
+21.0: (taxi-to-runway P2 G5 R1)
+22.0: (takeoff P2 R1)
+23.0: (taxi-to-runway P5 G1 R2)
+24.0: (takeoff P5 R2)
+25.0: (taxi-to-runway P3 G4 R3)
+26.0: (takeoff P3 R3)
+27.0: (unload-passengers P4 G2)
+28.0: (load-passengers P4 G2)
+29.0: (taxi-to-runway P4 G2 R1)
+30.0: (takeoff P4 R1)
+
+Plan-Length:31
+Metric (Search):55.120003
+Planning Time (msec): 211647
+Heuristic Time (msec): 189016
+Search Time (msec): 211025
+Expanded Nodes:689916
+States Evaluated:1423817
+Fixed constraint violations during search (zero-crossing):0
+Number of Dead-Ends detected:0
+Number of Duplicates detected:3755167

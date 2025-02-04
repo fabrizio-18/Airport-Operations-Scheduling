@@ -1,0 +1,52 @@
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 106
+Aibr Preprocessing
+|F|:19
+|X|:2
+|A|:24
+|P|:0
+|E|:0
+H1 Setup Time (msec): 31
+Setting horizon to:NaN
+Running WA-STAR
+h(n = s_0)=11.25
+f(n) = 11.25 (Expanded Nodes: 0, Evaluated States: 0, Time: 0.012) Frontier Size: 0
+f(n) = 11.69 (Expanded Nodes: 1, Evaluated States: 2, Time: 0.078) Frontier Size: 1
+f(n) = 11.73 (Expanded Nodes: 12, Evaluated States: 24, Time: 0.115) Frontier Size: 12
+f(n) = 11.94 (Expanded Nodes: 15, Evaluated States: 27, Time: 0.116) Frontier Size: 12
+f(n) = 11.96 (Expanded Nodes: 39, Evaluated States: 54, Time: 0.126) Frontier Size: 12
+f(n) = 12.0 (Expanded Nodes: 42, Evaluated States: 60, Time: 0.129) Frontier Size: 15
+f(n) = 12.02 (Expanded Nodes: 48, Evaluated States: 72, Time: 0.133) Frontier Size: 21
+f(n) = 12.46 (Expanded Nodes: 51, Evaluated States: 75, Time: 0.134) Frontier Size: 21
+f(n) = 21.73 (Expanded Nodes: 75, Evaluated States: 99, Time: 0.15) Frontier Size: 21
+f(n) = 21.939999 (Expanded Nodes: 78, Evaluated States: 102, Time: 0.154) Frontier Size: 21
+f(n) = 21.98 (Expanded Nodes: 81, Evaluated States: 105, Time: 0.155) Frontier Size: 21
+Problem Solved
+
+Found Plan:
+0.0: (land-plane P1 R1)
+1.0: (taxi-to-gate P1 R1 G2)
+2.0: (unload-passengers P1 G2)
+3.0: (load-passengers P1 G2)
+4.0: (refuel-plane P1 G2)
+5.0: (taxi-to-runway P1 G2 R1)
+6.0: (takeoff P1 R1)
+7.0: (land-plane P2 R1)
+8.0: (taxi-to-gate P2 R1 G1)
+9.0: (unload-passengers P2 G1)
+10.0: (load-passengers P2 G1)
+11.0: (taxi-to-runway P2 G1 R1)
+12.0: (takeoff P2 R1)
+
+Plan-Length:13
+Metric (Search):21.98
+Planning Time (msec): 974
+Heuristic Time (msec): 46
+Search Time (msec): 156
+Expanded Nodes:86
+States Evaluated:109
+Fixed constraint violations during search (zero-crossing):0
+Number of Dead-Ends detected:0
+Number of Duplicates detected:104

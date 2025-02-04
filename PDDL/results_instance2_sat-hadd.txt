@@ -1,0 +1,59 @@
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 56
+Aibr Preprocessing
+|F|:31
+|X|:3
+|A|:47
+|P|:0
+|E|:0
+H1 Setup Time (msec): 14
+Setting horizon to:NaN
+Running Greedy Best First Search
+h(n = s_0)=37.36
+ g(n)= 1.0 h(n)=34.86
+ g(n)= 1.6 h(n)=33.42
+ g(n)= 2.1 h(n)=32.18
+ g(n)= 2.5 h(n)=31.04
+ g(n)= 2.8 h(n)=30.919998
+ g(n)= 2.86 h(n)=30.86
+ g(n)= 3.1599998 h(n)=30.560001
+ g(n)= 13.16 h(n)=20.560001
+ g(n)= 13.22 h(n)=20.5
+ g(n)= 23.220001 h(n)=10.5
+ g(n)= 23.720001 h(n)=10.0
+ g(n)= 33.72 h(n)=0.0
+Problem Solved
+
+Found Plan:
+0.0: (land-plane P1 R1)
+1.0: (land-plane P3 R2)
+2.0: (taxi-to-assigned-gate P1 R1 G1)
+3.0: (land-plane P2 R1)
+4.0: (taxi-to-gate P3 R2 G3)
+5.0: (taxi-to-assigned-gate P2 R1 G2)
+6.0: (unload-passengers P3 G3)
+7.0: (load-passengers P3 G3)
+8.0: (taxi-to-runway P3 G3 R1)
+9.0: (takeoff P3 R1)
+10.0: (unload-passengers P2 G2)
+11.0: (load-passengers P2 G2)
+12.0: (taxi-to-runway P2 G2 R1)
+13.0: (takeoff P2 R1)
+14.0: (unload-passengers P1 G1)
+15.0: (refuel-plane P1 G1)
+16.0: (load-passengers P1 G1)
+17.0: (taxi-to-runway P1 G1 R1)
+18.0: (takeoff P1 R1)
+
+Plan-Length:19
+Metric (Search):33.72
+Planning Time (msec): 457
+Heuristic Time (msec): 17
+Search Time (msec): 39
+Expanded Nodes:28
+States Evaluated:74
+Fixed constraint violations during search (zero-crossing):0
+Number of Dead-Ends detected:4
+Number of Duplicates detected:16
