@@ -6,14 +6,12 @@
     G1 G2 G3 G4 G5 - gate
   )
   (:init
-    ;; High-priority planes
     (waiting-to-land P1)
     (waiting-to-land P2)
 
     (priority P1)
     (priority P2)
 
-    ;; Other planes
     (waiting-to-land P3)
     (waiting-to-land P4)
     (waiting-to-land P5)
@@ -24,12 +22,10 @@
     (passengers-loaded P4)
     (passengers-loaded P5)
 
-    ;; Runways available
     (runway-available R1)
     (runway-available R2)
     (runway-available R3)
 
-    ;; Gates available
     (gate-available G1)
     (gate-available G2)
     (gate-available G3)

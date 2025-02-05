@@ -8,25 +8,24 @@
   (:predicates
     ;; State predicates
     (plane-at ?p - plane ?l - object)   ; Plane is at a location (runway or gate)
-    (gate-available ?g - gate)         	; A gate is available for assignment
-    (runway-available ?r - runway)     	; A runway is free for landing or takeoff
-    (waiting-to-land ?p - plane)       	; Plane is waiting to land
-    (plane-takenoff ?p - plane)        	; Plane taken off
-    (passengers-loaded ?p - plane)     	; Passengers boarded from the gate
-    (has-unloaded-passengers ?p - plane)
-    (has-loaded-passengers ?p - plane)
-    (assigned-gate ?p -plane ?g -gate) 	; Plane has assigned gate
-    (priority ?p - plane)	       	; High-priority VIP plane
+    (gate-available ?g - gate)         	    ; A gate is available for assignment
+    (runway-available ?r - runway)     	 ; A runway is free for landing or takeoff
+    (waiting-to-land ?p - plane)       	    ; Plane is waiting to land
+    (plane-takenoff ?p - plane)        	        ; Plane taken off
+    (passengers-loaded ?p - plane)     	 ; Plane has passenger on board 
+    (has-unloaded-passengers ?p - plane)    ; Passengers unboarded at the gate       
+    (has-loaded-passengers ?p - plane)   ; Passengers loaded at the gate 
+    (assigned-gate ?p -plane ?g -gate) 	          ; Plane has assigned gate
+    (priority ?p - plane)	       	            ; High-priority VIP plane
   )
 
   (:functions
-    (taxi-time ?p - plane ?g - gate)   ; Time needed to taxi from gate to runway
+    (taxi-time ?p - plane ?g - gate)        ; Time needed to taxi from gate to runway
     (fuel-level ?p - plane)            ; Amount of fuel remaining in the plane
-    (fuel-consumption-rate ?p - plane) ; Fuel consumption per action
+    (fuel-consumption-rate ?p - plane)      ; Fuel consumption per action
     (total-cost)
   )
 
-  ;; Land Plane
   (:action land-plane
     :parameters (?p - plane ?r - runway)
     :precondition (and
@@ -84,7 +83,6 @@
   )
 )
 
-  ;; Taxi to Gate
   (:action taxi-to-gate
     :parameters (?p - plane ?r - runway ?g - gate)
     :precondition (and
@@ -141,7 +139,7 @@
       (increase (total-cost) 0)
     )
 )
-;; Refuel Plane 
+
   (:action refuel-plane
     :parameters (?p - plane ?g - gate)
     :precondition (and 
@@ -154,7 +152,6 @@
     )
   )
 
-  ;; Taxi to Runway 
   (:action taxi-to-runway
     :parameters (?p - plane ?g - gate ?r - runway)
     :precondition (and
@@ -183,7 +180,6 @@
     )
   )
 
-  ;; Takeoff 
   (:action takeoff
     :parameters (?p - plane ?r - runway)
     :precondition (and
@@ -209,7 +205,7 @@
       (plane-takenoff ?p)
       (passengers-loaded ?p)
       (not (has-loaded-passengers ?p))
-      (decrease (fuel-level ?p) 10)  ; Reduce fuel by 10
+      (decrease (fuel-level ?p) 10)      
       (increase (total-cost) 10)
     )
   )
